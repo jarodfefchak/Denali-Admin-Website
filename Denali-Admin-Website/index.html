@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Denali Admin Site</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ensures full viewport height */
+            margin: 0; /* Removes default margin */
+        }
+        .container {
+            width: 60vw;
+            flex-wrap: wrap;
+            text-align: center; /* Centers text */
+        }
+        button {
+            
+            font-size: 16px; /* Sets font size for all buttons */
+            margin: 10px; /* Adds some margin around buttons */
+            padding: 10px 20px; /* Adds padding inside buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the admin account for denaliprojects.com</h1>
+        <h2>Please Select an Option</h2>
+        <button  onclick="addJob()">Add Job Posting</button>
+        <button onclick="deleteJob()">Delete Job Posting</button>
+        <button  onclick="changeProject()">Change Projects Displayed</button>
+        <button  onclick="changeProject()">Update Solutions Displayed</button>
+        <button  onclick="changeProject()">Update About Us section</button>
+        <button  onclick="changeProject()">Update Inside Denali section</button>
+        <button  onclick="changeProject()">Update Your Future with Denali section</button>
+        
+    </div>
+    <script>
+        function addJob() {
+            window.location.href = "addPosting.html";
+        }
+
+        function deleteJob() {
+            window.location.href = "deletePosting.html";
+        }
+
+        function changeProject() {
+            window.location.href = "changeProject.html";
+        }
+    </script>
+</body>
+</html>
+

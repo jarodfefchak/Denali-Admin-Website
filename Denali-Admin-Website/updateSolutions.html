@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Change Projects</title>
+    <title>Change Solutions</title>
     <style>
         body {
             display: flex;
@@ -53,18 +53,8 @@
     <input type="text" id="newHeading" name="newHeading" maxlength="52">
     <button onclick="submitForm()" style = "margin: 10px">Submit</button>
     <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
-
-    <script>
-        function submitForm() {
-            var jobTitle = document.getElementById("jobTitle").value;
-            // Add your code here to handle the form submission
-            alert("Form submitted with job title: " + jobTitle);
-        }
-
-        function returnToIndex() {
-            // Redirect to index.html page
-            window.location.href = "index.html";
-        }
-    </script>
+ 
+    <script src="updateSolutions.js"></script>
+   
 </body>
 </html>

@@ -1,12 +1,11 @@
-function submitHeader() {
+function submitHeading() {
     const newHeading = document.getElementById('newHeading').value;
-
-    fetch('http://localhost:3001/updateSolutionsHeading', {
+    fetch('http://localhost:3001/updateInsideDenaliHeading', { // Fixed endpoint typo
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ solutions: newHeading })
+        body: JSON.stringify({ inside: newHeading }) // Fixed key from "solutions" to "inside"
     })
     .then(response => response.text())
     .then(data => {
@@ -15,10 +14,8 @@ function submitHeader() {
     .catch(error => {
         console.error('Error:', error);
     });
-  
 }
 
 function returnToIndex() {
-    // Redirect to index.html page
     window.location.href = "index.html";
 }

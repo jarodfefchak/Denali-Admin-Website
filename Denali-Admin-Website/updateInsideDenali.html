@@ -33,20 +33,14 @@
     <h1  style = "margin-bottom: 10px">Change the Inside Denali Header</h1>
     <p>Header (max 30 characters)</p>
     <input type="text" id="newHeading" name="newHeading" maxlength="30">
-    <button onclick="submitForm()" style = "margin: 10px">Submit </button>
+    <button onclick="submitHeading()" style = "margin: 10px">Submit </button>
     <h1>Update the text</h1>
     <textarea id="description" name="description" maxlength="1000"></textarea>
     
 
-    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
+    <button onclick="submitText()" style = "margin: 10px">Submit</button>
     <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
 
-    <script>
-
-        function returnToIndex() {
-            // Redirect to index.html page
-            window.location.href = "index.html";
-        }
-    </script>
+    <script src="updateInsideDenali.js"></script>
 </body>
 </html>

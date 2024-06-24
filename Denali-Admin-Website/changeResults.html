@@ -30,36 +30,25 @@
     </style>
 </head>
 <body>
-    <h1  style = "margin-bottom: 10px">Change the Header/Sub Header </h1>
+    <h1  style = "margin-bottom: 10px">Change the Header</h1>
     <p>Header (max 30 characters)</p>
     <input type="text" id="newHeading" name="newHeading" maxlength="30">
-    <button onclick="submitHeader()" style = "margin: 10px">Submit</button>
-    <h1>Change a solution that is currently diplayed on denaliprojects.com</h1>
-    <p>Please fill out the following feilds to update a project that is currently displayed.</p>
-    
-    <p><u> Please select the solution you would like to update. To change the number of solutions displayed please go into the code. </u></p><select name = "Solution" id = "solution">
+    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
+    <h1>Please select the result you would like to update</h1><select name = "result" id = "result">
         <option value = "1">1</option>
         <option value = "2">2</option>
-        <option value = "3">3</option>
-        <option value = "4">4</option>
-        <option value = "5">5</option>
-        <option value = "6">6</option>
-        <option value = "7">7</option>
-        <option value = "8">8</option>
-        <option value = "9">9</option>
+        <option value = "2">3</option>
         </select><br>
-
-    <p>Solution Name (max 52 characters)</p>
-    <input type="text" id="newHeading" name="newHeading" maxlength="52">
+    <h2>Change result number and catagory</h2>
+    <h3>number</h3>
+    <input type="text" id="newHeading" name="newHeading" maxlength="30" placeholder="Number">
+    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
+    <h3>catagory</h3>
+    <input type="text" id="newHeading" name="newHeading" maxlength="30" placeholder="Text">
     <button onclick="submitForm()" style = "margin: 10px">Submit</button>
     <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
 
     <script>
-        function submitForm() {
-            var jobTitle = document.getElementById("jobTitle").value;
-            // Add your code here to handle the form submission
-            alert("Form submitted with job title: " + jobTitle);
-        }
 
         function returnToIndex() {
             // Redirect to index.html page

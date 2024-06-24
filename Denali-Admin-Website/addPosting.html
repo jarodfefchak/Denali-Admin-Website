@@ -3,6 +3,11 @@
 <head>
     <title>Denali Admin Site - Add Posting</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .field-container {
             margin-bottom: 10px;
         }
@@ -10,37 +15,19 @@
             width: 250px;
             height: 20px;
         }
-    </style>
-    <script>
-        function addField(fieldName) {
-            var container = document.getElementById(fieldName);
-            var fieldContainer = document.createElement("div");
-            fieldContainer.className = "field-container";
-
-            var input = document.createElement("textarea");
-            input.name = fieldName;
-            input.maxLength = fieldName === 'description' ? 1000 : 300;
-            fieldContainer.appendChild(input);
-
-            var removeButton = document.createElement("button");
-            removeButton.innerHTML = "Remove";
-            removeButton.onclick = function(e) {
-                e.preventDefault();
-                container.removeChild(fieldContainer);
-            };
-            fieldContainer.appendChild(removeButton);
-
-            container.appendChild(fieldContainer);
+        button {
+            font-size: 14pt;
+            margin: 10px;
         }
-    </script>
+    </style>
 </head>
 <body>
     <h1>Add a Career Posting to denaliprojects.com</h1>
-    <p>Enter the information regarding the job you would like to post on denaliprojects.com. Adjust the size of the input feilds to accommodate for your text.</p>
+    <p>Enter the information regarding the job you would like to post on denaliprojects.com. Adjust the size of the input fields to accommodate for your text.</p>
     
     <p> Job Title</p><textarea id="jobTitle" name="jobTitle" maxlength="300"></textarea><br>
     <p> Location</p><textarea id="location" name="location" maxlength="300"></textarea><br>
-    <p> Description</p><textarea id="description" name="description" maxlength="1000"></textarea><br>
+    <p> Description</p><textarea id="description" name="description" maxlength="2000"></textarea><br>
 
     <p> Minimum Requirements</p>
     <div id="requirements"></div>
@@ -50,19 +37,13 @@
     <div id="assets"></div>
     <button onclick="addField('assets')">Add Asset</button><br>
 
-    <p> Why Denali Projects</p>
+    <p> Preferred Assets</p>
     <div id="Why"></div>
     <button onclick="addField('Why')">Add Reason</button><br>
     <h4>Click submit to add the new job posting to the career page. Your work will not be saved if you return to the home page before submitting.</h4>
-    <button onclick="submitForm()" >Submit</button>
-    <button onclick="returnToIndex()" style = "margin-left: 10px" ;>Return to Home Page</button>
+    <button onclick="submitForm()">Submit</button>
+    <button onclick="returnToIndex()" style="margin-left: 10px;">Return to Home Page</button>
 
-    <script>
-        function returnToIndex() {
-            window.location.href = "index.html";
-        }
-    </script>
+    <script src="addPosting.js"></script>
 </body>
 </html>
-
-

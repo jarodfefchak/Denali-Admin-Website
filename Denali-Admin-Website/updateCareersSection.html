@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Projects</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p{
+            font-size: 14pt;
+        }
+        select{
+            width: 50px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        button{
+            font-size: 14pt;
+        }
+        textarea{
+            width: 350px;
+        }
+        input{
+            width: 700px;
+            font-size: 13pt;
+        }
+    </style>
+</head>
+<body>
+    <h1  style = "margin-bottom: 10px">Change the Home page Careers Header </h1>
+    <p>Header (max 30 characters)</p>
+    <input type="text" id="newHeading" name="newHeading" maxlength="30">
+    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
+    <h1>Update the text</h1>
+    <textarea id="description" name="description" maxlength="1000"></textarea>
+    
+
+    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
+    <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
+
+    <script>
+
+        function returnToIndex() {
+            // Redirect to index.html page
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

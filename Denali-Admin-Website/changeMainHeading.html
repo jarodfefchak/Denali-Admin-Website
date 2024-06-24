@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Main Heading</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            margin-top: 100px;
+            flex-wrap: wrap;
+            text-align: center; /* Centers text */
+        }
+        button {
+            font-size: 14px; /* Sets font size for all buttons */
+            margin: 10px; /* Adds some margin around buttons */
+            padding: 10px 20px; /* Adds padding inside buttons */
+        }
+        input {
+            width: 600px;
+            height: 30px;
+            font-size: 14px;
+        }
+        img {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Change Main Heading of the Denali Home Page</h1>
+        <input type="text" id="newHeading" name="newHeading" maxlength="70">
+        <button onclick="submitForm()">Submit</button>
+        <button onclick="returnToIndex()">Return to Home Page</button>
+        <img src="../Images/HomeMain.png" alt="Home Main Image" height="600px">
+    
+        <script src="changeMainHeading.js"></script> <!-- Link to your JavaScript file -->
+    </div>
+</body>
+</html>

@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Denali Admin Site - Change Projects</title>
+    <title>Change Projects</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            font-size: 14pt;
+        }
+        select {
+            width: 50px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        button {
+            font-size: 14pt;
+        }
+        textarea {
+            width: 350px;
+        }
+        input {
+            width: 700px;
+            font-size: 13pt;
+        }
+    </style>
 </head>
 <body>
-    <h1>Change a project that is currently diplayed on denaliprojects.com</h1>
-    <p>Please fill out the following feilds to update a project that is currently displayed. Any images that need to be changed must be done manualy inside the images folder located within the website's program.</p>
+    <h1 style="margin-bottom: 10px">Change the Header/Sub Header</h1>
+    <p>Header (max 30 characters)</p>
+    <input type="text" id="newHeading" name="newHeading" maxlength="30">
+    <button onclick="submitFormHeading()" style="margin: 10px">Submit header</button>
+    <p>Sub Header (max 55 characters)</p>
+    <input type="text" id="newSubHeading" name="newSubHeading" maxlength="55">
+    <button onclick="submitFormSubHeadings()" style="margin: 10px">Submit sub header</button>
     
-    <p><u> Please select the project you would like to update </u></p><select name = "Project" id = "project">
-        <option value = "1">1</option>
-        <option value = "2">2</option>
-        <option value = "2">3</option>
-        </select><br>
+    <h1>Change a project that is currently displayed on denaliprojects.com</h1>
+    <p>Please fill out the following fields to update a project that is currently displayed.</p>
+    
+    <p><u>Please select the project you would like to update</u></p>
+    <select name="Project" id="project">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select><br>
 
-    <p> Project Name</p><textarea id="jobTitle" name="jobTitle" maxlength="300"></textarea><br>
-    <p> Description</p><textarea id="description" name="description" maxlength="1000"></textarea><br>
-    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
-    <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
+    <p>Project Name</p>
+    <textarea id="jobTitle" name="jobTitle" maxlength="300"></textarea><br>
+    <p>Description</p>
+    <textarea id="description" name="description" maxlength="1000"></textarea><br>
+    <button onclick="submitForm()" style="margin: 10px">Submit</button>
+    <button onclick="returnToIndex()" style="margin: 10px">Return to Home Page</button>
 
-    <script>
-        function submitForm() {
-            var jobTitle = document.getElementById("jobTitle").value;
-            // Add your code here to handle the form submission
-            alert("Form submitted with job title: " + jobTitle);
-        }
-
-        function returnToIndex() {
-            // Redirect to index.html page
-            window.location.href = "index.html";
-        }
-    </script>
+    <script src="changeProject.js"></script>
 </body>
 </html>

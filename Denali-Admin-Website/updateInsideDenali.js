@@ -16,6 +16,24 @@ function submitHeading() {
     });
 }
 
+function submitText() {
+    const newHeading = document.getElementById('description').value;
+    fetch('http://localhost:3001/updateInsideDenaliText', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ insideText: newHeading }) // Changed key to "insideText"
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
 function returnToIndex() {
     window.location.href = "index.html";
 }

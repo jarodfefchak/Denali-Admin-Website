@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Projects</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            font-size: 14pt;
+        }
+        select {
+            width: 50px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        button {
+            font-size: 14pt;
+        }
+        textarea {
+            width: 350px;
+        }
+        input {
+            width: 700px;
+            font-size: 13pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-bottom: 10px">Change the Header/Sub Header</h1>
+    <p>Header (max 30 characters)</p>
+    <input type="text" id="newHeading" name="newHeading" maxlength="30">
+    <button onclick="submitFormHeading()" style="margin: 10px">Submit header</button>
+    <p>Sub Header (max 55 characters)</p>
+    <input type="text" id="newSubHeading" name="newSubHeading" maxlength="55">
+    <button onclick="submitFormSubHeading()" style="margin: 10px">Submit sub header</button>
+    
+    <h1>Change the paragraph displayed</h1>
+  
+    <p><b>Section one</b></p>
+    <textarea id="newSection1" name="newSection1" width ="600px"></textarea>
+    <button onclick="submitSection1()" style="margin: 10px">Submit Section 1</button>
+    
+    <p><b>Section two</b></p>
+    <textarea id="newSection2" name="newSection2" width ="600px"></textarea>
+    <button onclick="submitSection2()" style="margin: 10px">Submit Section 2</button>
+
+    <p><b>Section three</b></p>
+    <textarea id="newSection3" name="newSection3" width ="600px"></textarea>
+    <button onclick="submitSection3()" style="margin: 10px">Submit Section 3</button>
+
+    <p><b>Section four</b></p>
+    <textarea id="newSection4" name="newSection4" width ="600px"></textarea>
+    <button onclick="submitSection4()" style="margin: 10px">Submit Section 4</button>
+    <button onclick="returnToIndex()" style="margin: 10px">Return to Home Page</button>
+
+    
+    <script src="updateAboutUs.js"></script>
+</body>
+</html>

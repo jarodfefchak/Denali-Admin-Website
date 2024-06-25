@@ -31,17 +31,20 @@
         <h3>Home Page Updates</h3>
         <button  onclick="mainHeading()" style="background-color: green;">Update Main Heading</button>
         <button  onclick="changeProject()" style="background-color: yellow;">Update Projects Displayed</button>
-        <button  onclick="changeResults()">Update Results Page</button>
+        <button  onclick="changeResults()"style="background-color: green;">Update Results Page</button>
         <button  onclick="changeSolutions()" style="background-color: yellow;">Update Solutions Displayed</button>
         <button  onclick="updateDenali()"  style="background-color: green;">Update Inside Denali section</button>
         <button  onclick="changeHomeCareers()" style="background-color: green;">Update Home Page Careers Section</button>
         <h3>Career Postings/Projects Updates</h3>
         <button  onclick="addJob()"style="background-color: green;">Add Job Posting</button>
         <button onclick="deleteJob()"style="background-color: green;">Delete Job Posting</button>
+        <button  onclick="addJob()">Add Solutions Project</button>
+        <button onclick="deleteJob()">Delete Solutions Project</button>
+   
         <h3>Other</h3>
-        <button  onclick="changeProject()">Update About Us section</button>
+        <button  onclick="updateAboutUs()">Update About Us section</button>
         <button  onclick="changeProject()">Update Contact Us Page</button>
-        <button  onclick="changeSolutions()">Change Solution Projects</button>
+        <button  onclick="changeProject()">Update Project Headinsg and Paragraphs</button>
 
         
         
@@ -72,6 +75,9 @@
         }
         function changeHomeCareers() {
             window.location.href = "updateCareersSection.html";
+        }
+        function updateAboutUs() {
+            window.location.href = "updateAboutUs.html";
         }
     </script>
 </body>

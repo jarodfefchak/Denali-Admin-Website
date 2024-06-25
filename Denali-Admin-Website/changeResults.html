@@ -30,30 +30,28 @@
     </style>
 </head>
 <body>
-    <h1  style = "margin-bottom: 10px">Change the Header</h1>
+    <h1 style="margin-bottom: 10px">Change the Header</h1>
     <p>Header (max 30 characters)</p>
     <input type="text" id="newHeading" name="newHeading" maxlength="30">
-    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
-    <h1>Please select the result you would like to update</h1><select name = "result" id = "result">
-        <option value = "1">1</option>
-        <option value = "2">2</option>
-        <option value = "2">3</option>
-        </select><br>
-    <h2>Change result number and catagory</h2>
-    <h3>number</h3>
-    <input type="text" id="newHeading" name="newHeading" maxlength="30" placeholder="Number">
-    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
-    <h3>catagory</h3>
-    <input type="text" id="newHeading" name="newHeading" maxlength="30" placeholder="Text">
-    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
-    <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
+    <button onclick="submitHeading()" style="margin: 10px">Submit</button>
 
-    <script>
+    <h1>Please select the result you would like to update</h1>
+    <select name="result" id="result">
+        <option value="0">1</option>
+        <option value="1">2</option>
+        <option value="2">3</option>
+    </select><br>
 
-        function returnToIndex() {
-            // Redirect to index.html page
-            window.location.href = "index.html";
-        }
-    </script>
+    <h2>Change result number and category</h2>
+    <h3>Number</h3>
+    <input type="text" id="newNumber" name="newNumber" maxlength="30" placeholder="Number">
+    <button onclick="submitNumber()" style="margin: 10px">Submit</button>
+
+    <h3>Category</h3>
+    <input type="text" id="newCategory" name="newCategory" maxlength="30" placeholder="Category">
+    <button onclick="submitCategory()" style="margin: 10px">Submit</button>
+
+    <button onclick="returnToIndex()" style="margin: 10px">Return to Home Page</button>
+    <script src="changeResults.js"></script>
 </body>
 </html>

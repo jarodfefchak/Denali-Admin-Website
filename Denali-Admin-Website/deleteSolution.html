@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Add Project</title>
+    <title>Delete Posting</title>
     <style>
         body {
             display: flex;
@@ -16,21 +16,13 @@
             font-size: 14pt;
             margin: 10px;
         }
-       select {
-            font-size: 14pt;
-            margin: 10px;
-        }
-        textarea {
-           width: 55vw;
-            height: 150px;
-        }
     </style>
   </head>
   <body>
-    <h1>Add a Project</h1>
+    <h1>Delete a Project</h1>
     <p>
       <u>
-        Please select the solution grouping you would like to add to.
+        Please select the solution grouping you would like to delete from.
       </u>
     </p>
     <select name="solution" id="solution">
@@ -45,28 +37,12 @@
       <option value="9">9</option></select
     ><br />
     <p>
-          Please enter the section this project is a part of.
+          Please enter the Project you would like to delete.
       </p>
-    <input type="text" id="section" name="section" />
-    <p>
-        Please enter the project name.
-    </p>
-  <input type="text" id="name" name="name" />
-  <p>
-    Please enter the client or confidential.
-</p>
-<input type="text" id="client" name="client" />
-<p>
-    Please enter the location.
-</p>
-<input type="text" id="location" name="location" />
-<p>
-    Please enter the project description.
-</p>
-<textarea type="text" id="description" name="description" ></textarea>
+    <input type="text" id="project" name="project" />
     <button onclick="submitForm()">Submit</button>
     <button onclick="returnToIndex()">Return to Home Page</button>
 
-    <script src="addSolutions.js"></script>
+    <script src="deleteSolution.js"></script>
   </body>
 </html>

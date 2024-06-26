@@ -9,52 +9,54 @@
             justify-content: center;
             align-items: center;
         }
-        p{
+        p {
             font-size: 14pt;
         }
-        select{
+        select {
             width: 50px;
             font-size: 14pt;
             text-align: center;
         }
-        button{
+        button {
             font-size: 14pt;
         }
-        textarea{
+        textarea {
             width: 350px;
         }
-        input{
+        input {
             width: 700px;
             font-size: 13pt;
         }
     </style>
 </head>
 <body>
-    <h1  style = "margin-bottom: 10px">Change the Header/Sub Header </h1>
+    <h1 style="margin-bottom: 10px">Change the Header/Sub Header</h1>
     <p>Header (max 30 characters)</p>
     <input type="text" id="newHeading" name="newHeading" maxlength="30">
-    <button onclick="submitHeader()" style = "margin: 10px">Submit</button>
-    <h1>Change a solution that is currently diplayed on denaliprojects.com</h1>
-    <p>Please fill out the following feilds to update a project that is currently displayed.</p>
-    
-    <p><u> Please select the solution you would like to update. To change the number of solutions displayed please go into the code. </u></p><select name = "Solution" id = "solution">
-        <option value = "1">1</option>
-        <option value = "2">2</option>
-        <option value = "3">3</option>
-        <option value = "4">4</option>
-        <option value = "5">5</option>
-        <option value = "6">6</option>
-        <option value = "7">7</option>
-        <option value = "8">8</option>
-        <option value = "9">9</option>
-        </select><br>
-
+    <button onclick="submitHeader()" style="margin: 10px">Submit</button>
+    <p>Solutions Page Description</p>
+    <input type="text" id="newDescription" name="newDescription">
+    <button onclick="submitDescription()" style="margin: 10px">Submit</button>
+    <h1>Change a solution that is currently displayed on denaliprojects.com</h1>
+    <p>Please fill out the following fields to update a project that is currently displayed.</p>
+    <p><u> Please select the solution you would like to update. To change the number of solutions displayed please go into the code. </u></p>
+    <select name="solution" id="solution">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select><br>
     <p>Solution Name (max 52 characters)</p>
-    <input type="text" id="newHeading" name="newHeading" maxlength="52">
-    <button onclick="submitForm()" style = "margin: 10px">Submit</button>
-    <button onclick="returnToIndex()"style = "margin: 10px" >Return to Home Page</button>
- 
+    <input type="text" id="newName" name="newName" maxlength="52">
+    <p>Solution Description</p>
+    <textarea type="text" id="newText" name="newText"></textarea>
+    <button onclick="submitForm()" style="margin: 10px">Submit</button>
+    <button onclick="returnToIndex()" style="margin: 10px">Return to Home Page</button>
     <script src="updateSolutions.js"></script>
-   
 </body>
 </html>

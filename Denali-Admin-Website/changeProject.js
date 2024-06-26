@@ -36,26 +36,26 @@ function submitFormSubHeadings() {
     });
 }
 
-// function submitForm() {
-//     const projectId = document.getElementById('project').value;
-//     const jobTitle = document.getElementById('jobTitle').value;
-//     const description = document.getElementById('description').value;
+function submitForm() {
+    const project = document.getElementById('project').value;
+    const jobTitle = document.getElementById('jobTitle').value;
+    const description = document.getElementById('description').value;
 
-//     fetch('http://localhost:3001/updateProject', {
-//         method: 'PUT',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({ id: projectId, title: jobTitle, description: description })
-//     })
-//     .then(response => response.text())
-//     .then(data => {
-//         alert(data);
-//     })
-//     .catch(error => {
-//         console.error('Error:', error);
-//     });
-// }
+    fetch('http://localhost:3001/updateProject', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ project: project, title: jobTitle, description: description })
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
 
 function returnToIndex() {
     window.location.href = "index.html";

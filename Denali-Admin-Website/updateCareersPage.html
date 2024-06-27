@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Projects</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            font-size: 14pt;
+        }
+        select {
+            width: 50px;
+            font-size: 14pt;
+            text-align: center;
+        }
+        button {
+            font-size: 14pt;
+        }
+        textarea {
+            width: 350px;
+        }
+        input {
+            width: 700px;
+            font-size: 13pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-bottom: 10px">Change the HeaderHeader</h1>
+    <p>Header (max 30 characters)</p>
+    <input type="text" id="newHeading" name="newHeading" maxlength="30">
+    <button onclick="submitHeader()" style="margin: 10px">Submit header</button>
+    
+    <h1>Change the paragraph displayed on the career postings page</h1>
+  
+    <p><b>text</b></p>
+    <textarea id="newText" name="newText" width ="600px"></textarea>
+    <button onclick="submitText()" style="margin: 10px">Submit Text</button>
+    <h1>Change the paragraph displayed on the career postings page when there are no current postings</h1>
+    <p><b>text</b></p>
+    <textarea id="newNoCareers" name="newNoCareers" width ="600px"></textarea>
+    <button onclick="submitNoCareers()" style="margin: 10px">Submit No Careers text</button>
+    <button onclick="returnToIndex()" style="margin: 10px">Return to Home Page</button>
+
+    
+    <script src="updateCareersPage.js"></script>
+</body>
+</html>

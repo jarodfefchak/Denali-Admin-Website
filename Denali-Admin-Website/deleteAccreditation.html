@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delete Accreditation</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        textarea {
+            width: 500px;
+            height: 100px;
+        }
+        button {
+            font-size: 14pt;
+            margin: 10px;
+        }
+        p{
+            font-size: 14pt;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Delete an Accreditation</h1>
+    <p>
+          Please enter the Accreditation you want to delete. Please type it our as it appears on the website
+      </p>
+    <textarea type="text" id="accreditation" name="accreditation" ></textarea>
+    <button onclick="submitForm()">Submit</button>
+    <button onclick="returnToIndex()">Return to Home Page</button>
+
+    <script src="deleteAccreditations.js"></script>
+  </body>
+</html>

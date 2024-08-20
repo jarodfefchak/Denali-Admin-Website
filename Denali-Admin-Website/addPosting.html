@@ -25,22 +25,31 @@
     <h1>Add a Career Posting to denaliprojects.com</h1>
     <p>Enter the information regarding the job you would like to post on denaliprojects.com. Adjust the size of the input fields to accommodate for your text.</p>
     
-    <p> Job Title</p><textarea id="jobTitle" name="jobTitle" maxlength="300"></textarea><br>
-    <p> Location</p><textarea id="location" name="location" maxlength="300"></textarea><br>
-    <p> Description</p><textarea id="description" name="description" maxlength="2000"></textarea><br>
+    <p>Job Title</p>
+    <textarea id="jobTitle" name="jobTitle" maxlength="300"></textarea><br>
+    
+    <p>Location</p>
+    <textarea id="location" name="location" maxlength="300"></textarea><br>
+    
+    <p>Description</p>
+    <textarea id="description" name="description" maxlength="2000"></textarea><br>
     
     <p>Responsibilities</p>
     <div id="assets"></div>
-    <button onclick="addField('assets')">Add Responsibilities</button><br>
+    <button onclick="addField('assets')">Add Responsibility</button><br>
     
-    <p> Minimum Requirements</p>
+    <p>Minimum Requirements</p>
     <div id="requirements"></div>
     <button onclick="addField('requirements')">Add Requirement</button><br>
-
-    <p> Preferred Assets</p>
+    
+    <p>Preferred Assets</p>
     <div id="Why"></div>
-    <button onclick="addField('Why')">Add Reason</button><br>
-   
+    <button onclick="addField('Why')">Add Preferred Asset</button><br>
+    
+    <p>Job Benefits</p>
+    <div id="benefits"></div>
+    <button onclick="addField('benefits')">Add Benefit</button><br>
+    
     <h4>Click submit to add the new job posting to the career page. Your work will not be saved if you return to the home page before submitting.</h4>
     <button onclick="submitForm()">Submit</button>
     <button onclick="returnToIndex()" style="margin-left: 10px;">Return to Home Page</button>

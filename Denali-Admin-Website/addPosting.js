@@ -26,6 +26,7 @@ function submitForm() {
     const requirements = Array.from(document.querySelectorAll('#requirements textarea')).map(ta => ta.value);
     const assets = Array.from(document.querySelectorAll('#assets textarea')).map(ta => ta.value);
     const why = Array.from(document.querySelectorAll('#Why textarea')).map(ta => ta.value);
+    const benefits = Array.from(document.querySelectorAll('#benefits textarea')).map(ta => ta.value);
 
     const newJob = {
         title: jobTitle,
@@ -33,7 +34,8 @@ function submitForm() {
         description: description,
         minimum_requirements: requirements,
         responsibilities: assets,
-        preferred: why
+        preferred: why,
+        benefits: benefits
     };
 
     fetch('http://localhost:3001/addJob', {
@@ -43,14 +45,21 @@ function submitForm() {
         },
         body: JSON.stringify(newJob)
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            return response.text().then(text => { throw new Error(text); });
+        }
+        return response.text();
+    })
     .then(data => {
         alert(data);
     })
     .catch(error => {
         console.error('Error:', error);
+        alert(`Error: ${error.message}`);
     });
 }
+
 
 function returnToIndex() {
     window.location.href = "index.html";

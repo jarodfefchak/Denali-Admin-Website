@@ -31,11 +31,11 @@
 </head>
 <body>
     <h1 style="margin-bottom: 10px">Change the Header/Sub Header</h1>
-    <p>Header (max 30 characters)</p>
-    <input type="text" id="newHeading" name="newHeading" maxlength="30">
+    <p>Header </p>
+    <textarea id="newHeading" name="newHeading" ></textarea></body>
     <button onclick="submitFormHeading()" style="margin: 10px">Submit header</button>
-    <p>Sub Header (max 55 characters)</p>
-    <input type="text" id="newSubHeading" name="newSubHeading" maxlength="55">
+    <p>Sub Header </p>
+    <textarea id="newSubHeading" name="newSubHeading" > </textarea>
     <button onclick="submitFormSubHeadings()" style="margin: 10px">Submit sub header</button>
     
     <h1>Change a project that is currently displayed on denaliprojects.com</h1>
@@ -49,10 +49,10 @@
     </select><br>
 
     <p>Project Name</p>
-    <textarea id="jobTitle" name="jobTitle" maxlength="300"></textarea><br>
+    <textarea id="jobTitle" name="jobTitle" ></textarea><br>
     <p>Description</p>
-    <textarea id="description" name="description" maxlength="1000"></textarea><br>
-    <button onclick="submitForm()" style="margin: 10px">Submit</button>
+    <textarea id="description" name="description" ></textarea><br>
+    <button onclick="submitForm()" style="margin: 10px">Submit project name and description</button>
     <button onclick="returnToIndex()" style="margin: 10px">Return to Home Page</button>
 
     <script src="changeProject.js"></script>

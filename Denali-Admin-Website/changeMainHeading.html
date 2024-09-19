@@ -11,14 +11,14 @@
         .container {
             margin-top: 100px;
             flex-wrap: wrap;
-            text-align: center; /* Centers text */
+            text-align: center; 
         }
         button {
-            font-size: 14px; /* Sets font size for all buttons */
-            margin: 10px; /* Adds some margin around buttons */
-            padding: 10px 20px; /* Adds padding inside buttons */
+            font-size: 14px; 
+            margin: 10px; 
+            padding: 10px 20px; 
         }
-        input {
+        textarea {
             width: 600px;
             height: 30px;
             font-size: 14px;
@@ -28,11 +28,11 @@
 <body>
     <div class="container">
         <h1>Change Main Heading of the Denali Home Page</h1>
-        <input type="text" id="newHeading" name="newHeading" maxlength="70">
+        <textarea id="newHeading" name="newHeading" ></textarea></br>
         <button onclick="submitForm()">Submit</button>
         <button onclick="returnToIndex()">Return to Home Page</button>
        
-        <script src="changeMainHeading.js"></script> <!-- Link to your JavaScript file -->
+        <script src="changeMainHeading.js"></script> 
     </div>
 </body>
 </html>
